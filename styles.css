@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #1f2b38);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilo do conteiner pai */
+.container {
+    text-align: center;
+    color: #fff;
+    width: 10%;
+    margin: 0 auto;
+    border: 2px solid rgba(173, 216, 230, 0.8);
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Estilo da lista de lands */
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    width: 100%;
+    margin: 5 auto;
+    padding: 10px;
+    flex-direction: column;
+    scrollbar-width: large;
+    scrollbar-color: #3FD8db transparent;
+    overflow-x: hidden;
+    margin-left: -5%;
+    margin-right: 1%;
+}
+
+/* Estilo da barra de rolagem */
+ul::-webkit-scrollbar {
+    width: 20px; /* Largura da barra de rolagem */
+}
+
+ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #3FD8db; /* Cor da barra de rolagem */
+    border-radius: 10px;
+}
+
+/* Estilo quando o cursor está sobre a barra de rolagem */
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #3498db; /* Altere para a cor desejada */
+}
+
+/* Estilo dos itens da lista */
+li {
+    margin: 5px auto;
+    width: 130px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; /* Adicionado para centralizar verticalmente */
+    position: static; /* Posicionamento relativo para os itens da lista */
+}
+
+/* Estilo dos links (lands) */
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adicionado para centralizar verticalmente */
+    padding: 2px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Efeito quando um link está aberto */
+a.opened {
+    background-color: rgba(231, 76, 60, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para os links na blacklist */
+.blacklisted a {
+    filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    padding: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Estilo do container dos botões (Rotas e Outros) */
+.buttons-container {
+    position: fixed;
+    top: 40%;
+    right: 670px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos botões */
+button {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo do botão Rotas */
+.routes-btn {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão Rotas */
+.routes-btn button {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse sobre o botão Rotas */
+.routes-btn button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo do container das rotas */
+.routes-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Estilo do cabeçalho das rotas */
+.routes-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilo do corpo das rotas */
+.routes-body {
+    padding: 10px;
+}
+
+/* Estilo do rodapé das rotas */
+.routes-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+}
+
+/* Estilo dos botões no rodapé das rotas */
+.routes-footer button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse sobre os botões no rodapé das rotas */
+.routes-footer button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Estilo da dica de ferramenta do cadeado */
+.tooltip {
+    position: absolute;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 3;
+    display: none;
+}
+
+/* Posicionamento da dica de ferramenta acima do cadeado */
+.blacklisted .tooltip {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
