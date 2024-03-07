@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pixel Lands</title>
+</head>
+<body>
+    <!-- Adiciona o botão "Rotas" fora do container da lista -->
+    <div class="draggable">
+        <div class="routes-btn">
+            <button id="routesBtn">Rotas</button>
+        </div>
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <h1>Pixel Lands</h1>
+        <div class="content-container">
+            <ul id="pixelList"></ul>
+
+            <div class="buttons-container">
+                <button id="open5Btn" class="draggable">Open 5 Lands</button>
+                <button id="open6Btn" class="draggable">Open 6 Lands</button>
+                <button id="open7Btn" class="draggable">Open 7 Lands</button>
+                <button id="shuffleBtn" class="draggable">Shuffle List</button>
+                <button id="reverseBtn" class="draggable">Reverse List</button>
+                
+                <!-- Adiciona o botão de reset -->
+                <button id="resetBtn" class="draggable">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
